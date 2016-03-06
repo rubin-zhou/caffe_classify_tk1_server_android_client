@@ -11,18 +11,22 @@ result will voiced out.
 (1)$ sudo apt-get update
 (2)$ sudo apt-get install apache2
 web browser: http://localhost
+
 2. Install Php and Php support for Apache2
 (1) $ sudo apt-get install php5 libapache2-mod-php5
+
 3. To test the apache2 server:
 (1) $ sudo rm /var/www/html/index.html
-(2) $ create a file named 'index.php' under /var/www/html:w
-    copy following lines to 'index.php'
-'''php
+
+(2) $ create a file named 'index.php' under /var/www/html copy following lines to 'index.php'
+
+```html
   <?DOCTYPE html>
   <html><body>
   <?php echo "Hello PHP!"; ?>
   </body></html>
-'''
+```html
+
 (3) restart web server: $ sudo /etc/init.d/apache2 restart, type below command in browser:
 http://localhost
 4. Change authority of /var/www folder
